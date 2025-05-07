@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Production Analytics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-900 text-white">
+    <!-- Header (same as dashboard) -->
+    <!-- Header -->
+    <header class="bg-slate-800 shadow-lg">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo and Brand -->
+                <div class="flex items-center">
+                    <a href="/" class="flex items-center">
+                        <img src="/Resources/images/ak_logo_simple_white.svg" alt="Company Logo" class="h-10 mr-3">
+                        <span class="text-xl font-bold">Production Analytics</span>
+                    </a>
+                </div>
+                <!-- Time Display -->
+                <div class="text-xl font-medium hidden md:block" id="current-time"></div>
+                <!-- Navigation -->
+                <nav class="hidden md:flex space-x-6">
+                    <a href="/" class="text-blue-400 hover:text-blue-300 px-3 py-2 text-lg font-medium">Dashboard</a>
+                    <div class="relative group">
+                        <button class="text-white hover:text-blue-300 px-3 py-2 text-lg font-medium flex items-center">
+                            Production Lines
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        
+                        <div class="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg z-10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                            <a href="/Pages/h3.html" class="block px-4 py-2 text-white hover:text-blue-300">Line H3</a>
+                            <a href="/Pages/h4.html" class="block px-4 py-2 text-white hover:text-blue-300">Line H4</a>
+                            <a href="/Pages/h5.html" class="block px-4 py-2 text-white hover:text-blue-300">Line H5</a>
+                            <a href="/Pages/h6.html" class="block px-4 py-2 text-white hover:text-blue-300">Line H6</a>
+                        </div>
+                    </div>
+                    <a href="/Pages/about.html" class="text-white hover:text-blue-300 px-3 py-2 text-lg font-medium">About</a>
+                    <a href="/Pages/contact.html" class="text-white hover:text-blue-300 px-3 py-2 text-lg font-medium">Contact</a>
+                </nav>
+                
+                
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-white focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12 max-w-4xl">
+        <h1 class="text-4xl font-bold mb-8 text-center">About Our Production System</h1>
+        
+        <div class="bg-slate-800 rounded-lg p-8 shadow-lg">
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h2 class="text-2xl font-semibold mb-4 text-blue-400">Our Mission</h2>
+                    <p class="text-slate-300 mb-6">
+                        To provide real-time, accurate production metrics that drive efficiency and quality 
+                        across all manufacturing lines. Our KPI dashboards help teams make data-driven 
+                        decisions instantly.
+                    </p>
+                    <img src="/Resources/images/production-floor.jpg" alt="Production Floor" class="rounded-lg shadow-md">
+                </div>
+                <div>
+                    <h2 class="text-2xl font-semibold mb-4 text-blue-400">Key Features</h2>
+                    <ul class="space-y-3 text-slate-300">
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-blue-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span>Real-time production monitoring</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-blue-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span>Automated KPI calculations</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-blue-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span>Cross-line performance comparison</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-blue-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span>Historical trend analysis</span>
+                        </li>
+                    </ul>
+                    
+                    <h2 class="text-2xl font-semibold mt-8 mb-4 text-blue-400">Technology Stack</h2>
+                    <div class="flex flex-wrap gap-4">
+                        <span class="bg-slate-700 px-3 py-1 rounded-full text-sm">HTML5</span>
+                        <span class="bg-slate-700 px-3 py-1 rounded-full text-sm">Tailwind CSS</span>
+                        <span class="bg-slate-700 px-3 py-1 rounded-full text-sm">JavaScript</span>
+                        <span class="bg-slate-700 px-3 py-1 rounded-full text-sm">Node.js</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (same as dashboard) -->
+    <footer class="bg-slate-800 py-6 fixed bottom-0 w-full">
+        <div class="container mx-auto px-4 text-center text-slate-400">
+            &copy; 2025 Alive & Kickin' Pizza Crust. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>
