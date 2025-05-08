@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Production Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body class="bg-slate-900 text-white flex flex-col min-h-screen">
     <!-- Header -->
@@ -14,8 +14,8 @@
             <div class="flex items-center justify-between">
                 <!-- Logo and Brand -->
                 <div class="flex items-center">
-                    <a href="/" class="flex items-center">
-                        <img src="/Resources/images/ak_logo_simple_white.svg" alt="Company Logo" class="h-10 mr-3">
+                    <a href="index.html" class="flex items-center">
+                        <img src="Resources/images/ak_logo_simple_white.svg" alt="Company Logo" class="h-10 mr-3">
                         <span class="text-xl font-bold">Production Analytics</span>
                     </a>
                 </div>
@@ -23,7 +23,7 @@
                 <div class="text-xl font-medium hidden md:block" id="current-time"></div>
                 <!-- Navigation -->
                 <nav class="hidden md:flex space-x-6">
-                    <a href="/" class="text-blue-400 hover:text-blue-300 px-3 py-2 text-lg font-medium">Dashboard</a>
+                    <a href="index.html" class="text-blue-400 hover:text-blue-300 px-3 py-2 text-lg font-medium">Dashboard</a>
                     <div class="relative group">
                         <button class="text-white hover:text-blue-300 px-3 py-2 text-lg font-medium flex items-center">
                             Production Lines
@@ -33,14 +33,15 @@
                         </button>
                         
                         <div class="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg z-10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                            <a href="/Pages/h3.html" class="block px-4 py-2 text-white hover:text-blue-300">Line H3</a>
-                            <a href="/Pages/h4.html" class="block px-4 py-2 text-white hover:text-blue-300">Line H4</a>
-                            <a href="/Pages/h5.html" class="block px-4 py-2 text-white hover:text-blue-300">Line H5</a>
-                            <a href="/Pages/h6.html" class="block px-4 py-2 text-white hover:text-blue-300">Line H6</a>
+                            <a href="./Pages/h3.html" class="block px-4 py-2 text-white hover:text-blue-300">Line H3</a>
+                            <a href="./Pages/h4.html" class="block px-4 py-2 text-white hover:text-blue-300">Line H4</a>
+                            <a href="./Pages/h5.html" class="block px-4 py-2 text-white hover:text-blue-300">Line H5</a>
+                            <a href="./Pages/h6.html" class="block px-4 py-2 text-white hover:text-blue-300">Line H6</a>
+                            <a href="./Pages/d1.html" class="block px-4 py-2 text-white hover:text-blue-300">Line D1</a>
                         </div>
                     </div>
-                    <a href="/Pages/about.html" class="text-white hover:text-blue-300 px-3 py-2 text-lg font-medium">About</a>
-                    <a href="/Pages/contact.html" class="text-white hover:text-blue-300 px-3 py-2 text-lg font-medium">Contact</a>
+                    <a href="./Pages/about.html" class="text-white hover:text-blue-300 px-3 py-2 text-lg font-medium">About</a>
+                    <a href="./Pages/contact.html" class="text-white hover:text-blue-300 px-3 py-2 text-lg font-medium">Contact</a>
                 </nav>
                 
                 
@@ -61,38 +62,38 @@
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <!-- Production Line 3 -->
-            <a href="/Pages/h3.html" class="bg-slate-800 rounded-lg p-6 hover:bg-slate-700 transition-colors flex flex-col">
+            <a href="Pages/h3.html" class="bg-slate-800 rounded-lg p-6 hover:bg-slate-700 transition-colors flex flex-col">
                 <h2 class="text-2xl font-semibold mb-4 text-center">Production Line 3</h2>
                 <div class="thumbnail-container mb-4">
-                    <img src="/Resources/images/H3/Social_Hiring_Image-1.webp" class="thumbnail-slide active">
-                    <img src="/Resources/images/H3/dummy.png" class="thumbnail-slide">
+                    <img src="Resources/images/H3/Social_Hiring_Image-1.webp" class="thumbnail-slide active">
+                    <img src="Resources/images/H3/dummy.png" class="thumbnail-slide">
                 </div>
             </a>
 
             <!-- Production Line 4 -->
-            <a href="/Pages/h4.html" class="bg-slate-800 rounded-lg p-6 hover:bg-slate-700 transition-colors flex flex-col">
+            <a href="Pages/h4.html" class="bg-slate-800 rounded-lg p-6 hover:bg-slate-700 transition-colors flex flex-col">
                 <h2 class="text-2xl font-semibold mb-4 text-center">Production Line 4</h2>
                 <div class="thumbnail-container mb-4">
-                    <img src="/Resources/images/H3/Social_Hiring_Image-1.webp" class="thumbnail-slide active">
-                    <img src="/Resources/images/H3/dummy.png" class="thumbnail-slide">
+                    <img src="Resources/images/H3/Social_Hiring_Image-1.webp" class="thumbnail-slide active">
+                    <img src="Resources/images/H3/dummy.png" class="thumbnail-slide">
                 </div>
             </a>
 
             <!-- Production Line 5 -->
-            <a href="/Pages/h5.html" class="bg-slate-800 rounded-lg p-6 hover:bg-slate-700 transition-colors flex flex-col">
+            <a href="Pages/h5.html" class="bg-slate-800 rounded-lg p-6 hover:bg-slate-700 transition-colors flex flex-col">
                 <h2 class="text-2xl font-semibold mb-4 text-center">Production Line 5</h2>
                 <div class="thumbnail-container mb-4">
-                    <img src="/Resources/images/H3/Social_Hiring_Image-1.webp" class="thumbnail-slide active">
-                    <img src="/Resources/images/H3/dummy.png" class="thumbnail-slide">
+                    <img src="Resources/images/H3/Social_Hiring_Image-1.webp" class="thumbnail-slide active">
+                    <img src="Resources/images/H3/dummy.png" class="thumbnail-slide">
                 </div>
             </a>
 
             <!-- Production Line 6 -->
-            <a href="/Pages/h6.html" class="bg-slate-800 rounded-lg p-6 hover:bg-slate-700 transition-colors flex flex-col">
+            <a href="Pages/h6.html" class="bg-slate-800 rounded-lg p-6 hover:bg-slate-700 transition-colors flex flex-col">
                 <h2 class="text-2xl font-semibold mb-4 text-center">Production Line 6</h2>
                 <div class="thumbnail-container mb-4">
-                    <img src="/Resources/images/H3/Social_Hiring_Image-1.webp" class="thumbnail-slide active">
-                    <img src="/Resources/images/H3/dummy.png" class="thumbnail-slide">
+                    <img src="Resources/images/H3/Social_Hiring_Image-1.webp" class="thumbnail-slide active">
+                    <img src="Resources/images/H3/dummy.png" class="thumbnail-slide">
                 </div>
             </a>
         </div>
@@ -105,6 +106,6 @@
         </div>
     </footer>
 
-    <script src="/scripts.js"></script>
+    <script src="./scripts.js"></script>
 </body>
 </html>

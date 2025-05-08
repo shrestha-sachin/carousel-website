@@ -33,6 +33,14 @@
     opacity: 1;
 }
 
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.animate-spin {
+    animation: spin 1s linear infinite;
+}
+
 /* Fullscreen mode - ONLY time visible */
 :fullscreen #kpi-display {
     background: #0f172a;
