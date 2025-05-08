@@ -55,28 +55,60 @@
         </div>
     </header>
 
-
     <!-- Main Content -->
     <main class="container mx-auto px-4 py-12 max-w-4xl">
         <h1 class="text-4xl font-bold mb-8 text-center">Contact Our Team</h1>
         
         <div class="grid md:grid-cols-2 gap-8">
             <!-- Contact Form -->
-            <!-- Replace the entire form section with this -->
             <div class="bg-slate-800 rounded-lg p-8 shadow-lg">
                 <h2 class="text-2xl font-semibold mb-6 text-blue-400">Send Us a Message</h2>
-                <form action="/send_email.php" method="POST">
-                    <div class="mb-4">
+                
+                <!-- FormSubmit Form -->
+                <form 
+                    action="https://formsubmit.co/sshrestha@akcrust.com" 
+                    method="POST"
+                    class="space-y-4"
+                >
+                    <!-- FormSubmit Configuration -->
+                    <input type="hidden" name="_subject" value="New Contact from Production Dashboard">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_next" value="./thankyou.html">
+                    <input type="text" name="_honey" style="display:none">
+                    
+                    <!-- Name Field -->
+                    <div>
                         <label for="name" class="block text-slate-300 mb-2">Name *</label>
-                        <input type="text" id="name" name="name" required class="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                        <input 
+                            type="text" 
+                            id="name" 
+                            name="name" 
+                            required 
+                            class="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                        >
                     </div>
-                    <div class="mb-4">
+                    
+                    <!-- Email Field -->
+                    <div>
                         <label for="email" class="block text-slate-300 mb-2">Email *</label>
-                        <input type="email" id="email" name="email" required class="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            required 
+                            class="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                        >
                     </div>
-                    <div class="mb-4">
+                    
+                    <!-- Subject Field -->
+                    <div>
                         <label for="subject" class="block text-slate-300 mb-2">Subject *</label>
-                        <select id="subject" name="subject" required class="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                        <select 
+                            id="subject" 
+                            name="subject" 
+                            required 
+                            class="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                        >
                             <option value="" disabled selected>Select a subject</option>
                             <option>Dashboard Support</option>
                             <option>Production Issues</option>
@@ -84,12 +116,24 @@
                             <option>Other</option>
                         </select>
                     </div>
-                    <div class="mb-6">
+                    
+                    <!-- Message Field -->
+                    <div>
                         <label for="message" class="block text-slate-300 mb-2">Message *</label>
-                        <textarea id="message" name="message" rows="4" required class="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
+                        <textarea 
+                            id="message" 
+                            name="message" 
+                            rows="4" 
+                            required 
+                            class="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                        ></textarea>
                     </div>
-                    <input type="hidden" name="_replyto" value="it@akcrust.com">
-                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition duration-200">
+                    
+                    <!-- Submit Button -->
+                    <button 
+                        type="submit" 
+                        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition duration-200"
+                    >
                         Send Message
                     </button>
                 </form>
