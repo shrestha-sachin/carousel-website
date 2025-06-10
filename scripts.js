@@ -1,5 +1,4 @@
-
-//FullScreen
+// filepath: c:\Production\carousel-website\scripts.js
 document.addEventListener('DOMContentLoaded', () => {
     // Image cycling
     let currentSlide = 0;
@@ -41,24 +40,4 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     fullscreenBtn.addEventListener('click', toggleFullscreen);
-});
-
-
-document.addEventListener('DOMContentLoaded', () => {
-    // Initialize all thumbnail slideshows
-    document.querySelectorAll('.thumbnail-container').forEach(container => {
-        const slides = container.querySelectorAll('.thumbnail-slide');
-        let currentSlide = 0;
-        const cycleTime = 5000; // 5 seconds per slide
-        
-        function cycleThumbnails() {
-            slides.forEach(slide => slide.classList.remove('active'));
-            currentSlide = (currentSlide + 1) % slides.length;
-            slides[currentSlide].classList.add('active');
-        }
-        
-        if (slides.length > 1) {
-            setInterval(cycleThumbnails, cycleTime);
-        }
-    });
 });

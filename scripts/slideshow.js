@@ -1,4 +1,4 @@
-// For the main slideshow @Pages
+// filepath: c:\Production\carousel-website\scripts\slideshow.js
 document.addEventListener("DOMContentLoaded", () => {
     const imageContainer = document.getElementById("image-container");
     const maxImages = 20;
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function startSlideshow() {
         if (loadedImages.length === 0) {
             const p = document.createElement("p");
-            p.textContent = `No images available for Line H3.`;
+            p.textContent = `No images available for this line.`;
             p.className = "text-center text-white text-xl";
             imageContainer.appendChild(p);
             return;
@@ -69,5 +69,3 @@ document.addEventListener("DOMContentLoaded", () => {
         tryImageExtensions(i);
     }
 });
-
-

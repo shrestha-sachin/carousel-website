@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Line 1 - Production KPI</title>
+    <title>Production Dashboard - Home</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-slate-900 text-white">
 
@@ -16,7 +16,7 @@
                 <!-- Logo and Brand -->
                 <div class="flex items-center">
                     <a href="./index.html" class="flex items-center">
-                        <img src="#" alt="Company Logo" class="h-10 mr-3">
+                        <img src="Resources/logo/company-logo.svg" alt="Company Logo" class="h-10 mr-3">
                         <span class="text-xl font-bold">Production Analytics</span>
                     </a>
                 </div>
@@ -26,7 +26,7 @@
                 <nav class="hidden md:flex space-x-6">
                     <a href="./index.html" class="text-blue-400 hover:text-blue-300 px-3 py-2 text-lg font-medium">Dashboard</a>
                     <div class="relative group">
-                        <button class="text-white-400 hover:text-blue-300 px-3 py-2 text-lg font-medium flex items-center">
+                        <button class="text-white hover:text-blue-300 px-3 py-2 text-lg font-medium flex items-center">
                             Production Lines
                             <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
@@ -34,17 +34,15 @@
                         </button>
                         
                         <div class="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg z-10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                            <a href="#" class="block px-4 py-2 text-white hover:text-blue-300">Line 1</a>
-                            <a href="#" class="block px-4 py-2 text-white hover:text-blue-300">Line 2</a>
-                            <a href="#" class="block px-4 py-2 text-white hover:text-blue-300">Line 3</a>
-                            <a href="#" class="block px-4 py-2 text-white hover:text-blue-300">Line 4</a>
+                            <a href="./Pages/line1.html" class="block px-4 py-2 text-white hover:text-blue-300">Line 1</a>
+                            <a href="./Pages/line2.html" class="block px-4 py-2 text-white hover:text-blue-300">Line 2</a>
+                            <a href="./Pages/line3.html" class="block px-4 py-2 text-white hover:text-blue-300">Line 3</a>
+                            <a href="./Pages/line4.html" class="block px-4 py-2 text-white hover:text-blue-300">Line 4</a>
                         </div>
                     </div>
                     <a href="./Pages/about.html" class="text-white hover:text-blue-300 px-3 py-2 text-lg font-medium">About</a>
                     <a href="./Pages/contact.html" class="text-white hover:text-blue-300 px-3 py-2 text-lg font-medium">Contact</a>
                 </nav>
-                
-                
                 
                 <!-- Mobile Menu Button -->
                 <button class="md:hidden text-white focus:outline-none">
@@ -56,30 +54,79 @@
         </div>
     </header>
 
-    
-    <!-- Normal Mode Container -->
-    <div id="kpi-display" class="container mx-auto px-4 py-8 min-h-screen">
+    <!-- Dashboard Container -->
+    <div id="dashboard" class="container mx-auto px-4 py-8 min-h-screen">
         <!-- Header -->
-        <div class="header-content flex items-center justify-between mb-8">
-            <div class="text-2xl font-semibold" id="current-time"></div>
-            <h2 class="text-3xl font-bold text-center">Production Line 1</h2>
-            <button id="fullscreen-btn" class="flex items-center gap-2 px-4 py-2 bg-slate-800 rounded-lg hover:bg-slate-700 transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                    <path d="M3 3a1 1 0 011-1h4a1 1 0 010 2H6.414l2.293 2.293a1 1 0 11-1.414 1.414L5 6.414V8a1 1 0 01-2 0V3zm9 1a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 11-2 0V6.414l-2.293 2.293a1 1 0 11-1.414-1.414L13.586 5H12a1 1 0 01-1-1zM3 12a1 1 0 011 1v1.586l2.293-2.293a1 1 0 111.414 1.414L6.414 15H8a1 1 0 110 2H3a1 1 0 01-1-1v-4a1 1 0 011-1zm14 0a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 110-2h1.586l-2.293-2.293a1 1 0 111.414-1.414L15 13.586V12a1 1 0 011-1z"/>
-                </svg>
-                <span>Fullscreen</span>
-            </button>
+        <div class="header-content text-center mb-12">
+            <h1 class="text-4xl font-bold mb-4">Production Analytics Dashboard</h1>
+            <p class="text-xl text-slate-300">View real-time production data for all manufacturing lines</p>
         </div>
 
-        <!-- Image Container -->
-        <div id="image-container" class="relative h-[80vh] w-full mx-auto">
-        <!-- JS will inject images here -->
-        </div>      
-
-
-        <!-- Footer -->
-        <div class="footer-content mt-8 text-center text-slate-400 text-lg">
-            Auto-refreshing every 10 seconds | <a href="./index.html" class="text-blue-400 hover:text-blue-300">Refresh Now</a>
+        <!-- Production Lines Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <!-- Line 1 Card -->
+            <a href="./Pages/line1.html" class="bg-slate-800 rounded-lg p-6 shadow-lg hover:bg-slate-700 transition-all">
+                <h2 class="text-2xl font-bold mb-3 text-blue-400">Production Line 1</h2>
+                <div class="flex items-start">
+                    <img src="Resources/images/image1.jpg" alt="Line 1 Preview" class="w-24 h-24 object-cover rounded mr-4">
+                    <div>
+                        <p class="text-slate-300 mb-2">View real-time KPIs, performance metrics and production data for Line 1.</p>
+                        <span class="inline-block px-3 py-1 bg-blue-900 text-blue-300 rounded-full text-sm">Active</span>
+                    </div>
+                </div>
+            </a>
+            
+            <!-- Line 2 Card -->
+            <a href="./Pages/line2.html" class="bg-slate-800 rounded-lg p-6 shadow-lg hover:bg-slate-700 transition-all">
+                <h2 class="text-2xl font-bold mb-3 text-blue-400">Production Line 2</h2>
+                <div class="flex items-start">
+                    <img src="Resources/images/image2.jpg" alt="Line 2 Preview" class="w-24 h-24 object-cover rounded mr-4">
+                    <div>
+                        <p class="text-slate-300 mb-2">View real-time KPIs, performance metrics and production data for Line 2.</p>
+                        <span class="inline-block px-3 py-1 bg-blue-900 text-blue-300 rounded-full text-sm">Active</span>
+                    </div>
+                </div>
+            </a>
+            
+            <!-- Line 3 Card -->
+            <a href="./Pages/line3.html" class="bg-slate-800 rounded-lg p-6 shadow-lg hover:bg-slate-700 transition-all">
+                <h2 class="text-2xl font-bold mb-3 text-blue-400">Production Line 3</h2>
+                <div class="flex items-start">
+                    <img src="Resources/images/image3.jpg" alt="Line 3 Preview" class="w-24 h-24 object-cover rounded mr-4">
+                    <div>
+                        <p class="text-slate-300 mb-2">View real-time KPIs, performance metrics and production data for Line 3.</p>
+                        <span class="inline-block px-3 py-1 bg-blue-900 text-blue-300 rounded-full text-sm">Active</span>
+                    </div>
+                </div>
+            </a>
+            
+            <!-- Line 4 Card -->
+            <a href="./Pages/line4.html" class="bg-slate-800 rounded-lg p-6 shadow-lg hover:bg-slate-700 transition-all">
+                <h2 class="text-2xl font-bold mb-3 text-blue-400">Production Line 4</h2>
+                <div class="flex items-start">
+                    <img src="Resources/images/image4.jpg" alt="Line 4 Preview" class="w-24 h-24 object-cover rounded mr-4">
+                    <div>
+                        <p class="text-slate-300 mb-2">View real-time KPIs, performance metrics and production data for Line 4.</p>
+                        <span class="inline-block px-3 py-1 bg-blue-900 text-blue-300 rounded-full text-sm">Active</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        
+        <!-- Resources Section -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <a href="./Pages/about.html" class="bg-slate-800 rounded-lg p-4 shadow-lg hover:bg-slate-700 transition-all text-center">
+                <h3 class="text-xl font-bold mb-2">About</h3>
+                <p class="text-slate-300">Learn more about our production analytics platform</p>
+            </a>
+            <a href="#" class="bg-slate-800 rounded-lg p-4 shadow-lg hover:bg-slate-700 transition-all text-center">
+                <h3 class="text-xl font-bold mb-2">Documentation</h3>
+                <p class="text-slate-300">Access technical documentation and user guides</p>
+            </a>
+            <a href="./Pages/contact.html" class="bg-slate-800 rounded-lg p-4 shadow-lg hover:bg-slate-700 transition-all text-center">
+                <h3 class="text-xl font-bold mb-2">Contact Support</h3>
+                <p class="text-slate-300">Get help with any technical issues</p>
+            </a>
         </div>
     </div>
 
@@ -89,7 +136,6 @@
         </div>
     </footer>
 
-    <script src="../scripts/slideshow.js"></script>
-    <script src="../scripts.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
