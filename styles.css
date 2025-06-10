@@ -26,11 +26,13 @@
     left: 0;
     width: 100%;
     height: 100%;
+    display: none;
     object-fit: contain;
     transition: opacity 1s ease-in-out;
 }
 .kpi-slide.active {
     opacity: 1;
+    display: block;
 }
 
 @keyframes spin {
@@ -39,6 +41,16 @@
 
 .animate-spin {
     animation: spin 1s linear infinite;
+}
+
+:fullscreen #image-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw !important;
+    height: 100vh !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 /* Fullscreen mode - ONLY time visible */
