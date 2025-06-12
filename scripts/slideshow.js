@@ -1,8 +1,16 @@
-// filepath: c:\Production\carousel-website\scripts\slideshow.js
+// For the main slideshow @Pages
 document.addEventListener("DOMContentLoaded", () => {
     const imageContainer = document.getElementById("image-container");
     const maxImages = 20;
     const cycleTime = 10000;
+    
+    // Determine current page and set appropriate folder
+    //const currentPath = window.location.pathname;
+    let lineName = "1"; // Default folder
+    
+    //if (currentPath.includes("index.html")) {
+    //    lineName = "W7";
+    //}
     
     const imageBasePath = `../Resources/images/`;
     const imagePrefix = "image";
@@ -14,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function startSlideshow() {
         if (loadedImages.length === 0) {
             const p = document.createElement("p");
-            p.textContent = `No images available for this line.`;
+            p.textContent = `No images available for Line ${lineName}.`;
             p.className = "text-center text-white text-xl";
             imageContainer.appendChild(p);
             return;
@@ -69,3 +77,5 @@ document.addEventListener("DOMContentLoaded", () => {
         tryImageExtensions(i);
     }
 });
+
+
