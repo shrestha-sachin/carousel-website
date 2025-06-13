@@ -1,5 +1,5 @@
 # Carousel Website
-
+<img src="./Resources/production-kpi-website.png" alt="Website Dashboard" width="300" height="200">
 ## Overview
 This project is a carousel website designed for displaying production analytics. It features multiple pages that provide information about different production lines, a contact form for user inquiries, and a thank-you page for form submissions.
 
@@ -47,3 +47,4 @@ carousel-website
 
 ## Contribution
 Feel free to contribute to this project by submitting issues or pull requests. Your feedback and suggestions are welcome!
+
